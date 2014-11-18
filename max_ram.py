@@ -10,7 +10,7 @@ file_mem = open('/proc/meminfo', 'r')
 file_mem.readline()
 free_mem_unparsed = file_mem.readline()
 match = pattern.search(free_mem_unparsed)
-free_mem = (int)  (match.group())
+free_mem = (int)(match.group())
 
 kilobyte = (0,) * (1024 / 8)
 data = kilobyte * free_mem
